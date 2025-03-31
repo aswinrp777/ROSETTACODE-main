@@ -13,10 +13,3 @@ This repository contains solutions to various programming tasks from the [Rosett
    ```bash
    git clone https://github.com/your-username/ROSETTACODE-main.git
 Replace placeholders like `your-username` with actual details specific to your project. Let me know if you need further customization!
-
-## Folder Structure
-ROSETTACODE-main/
-├── solutions/       # Contains solutions to tasks
-├── tests/           # Unit tests for the solutions
-├── docs/            # Documentation and additional resources
-└── [README.md](http://_vscodecontentref_/1)        # Project overview
