@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Free AI-powered code converter between multiple programming languages">
+    <link rel="icon" href="rosettacode_logo.svg" type="image/svg+xml">
+    <title>ROSETTACODE</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#4F46E5',
+                        secondary: '#10B981'
+                    }
+                }
+            }
+        }
+    </script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body class="bg-gray-50 dark:bg-gray-900 dark:text-gray-100">
+    <!-- Header -->
+    <header class="bg-white shadow-sm dark:bg-gray-800">
+        <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+            <div class="flex items-center space-x-2">
+                <i class="fas fa-solid fa-laptop-code text-primary text-3xl"></i>
+                <h1 class="text-2xl font-extrabold text-primary dark:text-white">ROSETTACODE</h1>
+            </div>
+            <button id="theme-toggle" class="text-gray-600 dark:text-gray-300">
+                <i id="theme-icon" class="fas fa-sun text-xl"></i>
+            </button>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="bg-gradient-to-r from-primary to-secondary text-white py-16">
+        <div class="container mx-auto px-4 text-center">
+            <h1 class="text-4xl md:text-5xl font-bold mb-4">AI-Powered Code Converter</h1>
+            <p class="text-xl max-w-2xl mx-auto mb-8">Instantly convert code between multiple programming languages with  advanced AI technology.</p>
+            <a href="#converter" class="bg-white text-primary font-medium py-3 px-8 rounded-lg hover:bg-gray-100 transition duration-200">Get Started</a>
+        </div>
+    </section>
+
+    <!-- Main Converter Section -->
+    <main class="container mx-auto px-4 py-8" id="converter">
+        <div class="bg-white rounded-lg shadow-md p-6 mb-8 dark:bg-gray-800 dark:text-gray-100">
+            <h2 class="text-2xl font-bold text-gray-800 mb-6 dark:text-white">Code Converter</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+                <!-- Input Section -->
+                <div>
+                    <div class="flex justify-between items-center mb-2">
+                        <label class="text-gray-700 font-medium dark:text-gray-300">From</label>
+                        <div class="flex items-center space-x-2">
+                            <i id="from-language-icon" class="fab fa-python text-blue-500"></i>
+                            <select id="from-language" class="bg-gray-100 border border-gray-300 rounded px-3 py-1 text-sm dark:bg-gray-700 dark:border-gray-600 dark:text-gray-300">
+                                <option value="Python">Python</option>
+                                <option value="Java">Java</option>
+                            </select>
+                        </div>
+                    </div>
+                    <textarea id="input-code" class="w-full h-64 p-4 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-primary dark:bg-gray-700 dark:border-gray-600 dark:text-gray-300" placeholder="Enter your code here"></textarea>
+                </div>
+
+                <!-- Output Section -->
+                <div>
+                    <div class="flex justify-between items-center mb-2">
+                        <label class="text-gray-700 font-medium dark:text-gray-300">To</label>
+                        <div class="flex items-center space-x-2">
+                            <i id="to-language-icon" class="fab fa-java text-yellow-500"></i>
+                            <select id="to-language" class="bg-gray-100 border border-gray-300 rounded px-3 py-1 text-sm dark:bg-gray-700 dark:border-gray-600 dark:text-gray-300">
+                                <option value="Java">Java</option>
+                                <option value="Python">Python</option>
+                            </select>
+                        </div>
+                    </div>
+                    <textarea id="output-code" class="w-full h-64 p-4 border border-gray-300 rounded-lg bg-gray-50 dark:bg-gray-700 dark:border-gray-600 dark:text-gray-300" placeholder="Converted code will appear here" readonly></textarea>
+                </div>
+            </div>
+
+            <button class="bg-primary hover:bg-primary-dark text-white font-medium py-2 px-6 rounded-lg transition duration-200">
+                <i class="fas fa-sync-alt mr-2"></i> Convert Code
+            </button>
+        </div>
+
+        <!-- How It Works Section -->
+        <div class="bg-white rounded-lg shadow-md p-6 mb-8 dark:bg-gray-800 dark:text-gray-100">
+            <h2 class="text-2xl font-bold text-gray-800 mb-6 dark:text-white">How It Works</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div class="bg-white p-6 rounded-lg shadow-sm dark:bg-gray-800 dark:text-gray-100 text-center">
+                    <div class="bg-primary bg-opacity-10 text-primary w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-code text-2xl"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-gray-800 mb-2 dark:text-white">1. Paste Your Code</h3>
+                    <p class="text-gray-600 dark:text-gray-300">Copy and paste your code into the input box</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-sm dark:bg-gray-800 dark:text-gray-100 text-center">
+                    <div class="bg-primary bg-opacity-10 text-primary w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-exchange-alt text-2xl"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-gray-800 mb-2 dark:text-white">2. Select Languages</h3>
+                    <p class="text-gray-600 dark:text-gray-300">Choose source and target programming languages</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-sm dark:bg-gray-800 dark:text-gray-100 text-center">
+                    <div class="bg-primary bg-opacity-10 text-primary w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-download text-2xl"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-gray-800 mb-2 dark:text-white">3. Get Converted Code</h3>
+                    <p class="text-gray-600 dark:text-gray-300">Copy the converted code instantly</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Features Section -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+            <div class="bg-white p-6 rounded-lg shadow-sm dark:bg-gray-800 dark:text-gray-100">
+                <div class="text-primary mb-3">
+                    <i class="fas fa-bolt text-2xl"></i>
+                </div>
+                <h3 class="text-lg font-bold text-gray-800 mb-2 dark:text-white">Fast Conversion</h3>
+                <p class="text-gray-600 dark:text-gray-300">Convert code between languages in seconds with  AI-powered engine.</p>
+            </div>
+            <div class="bg-white p-6 rounded-lg shadow-sm dark:bg-gray-800 dark:text-gray-100">
+                <div class="text-primary mb-3">
+                    <i class="fas fa-language text-2xl"></i>
+                </div>
+                <h3 class="text-lg font-bold text-gray-800 mb-2 dark:text-white">Multiple Languages</h3>
+                <p class="text-gray-600 dark:text-gray-300">Supports conversion between Python, Java(Now).</p>
+            </div>
+            <div class="bg-white p-6 rounded-lg shadow-sm dark:bg-gray-800 dark:text-gray-100">
+                <div class="text-primary mb-3">
+                    <i class="fas fa-lock text-2xl"></i>
+                </div>
+                <h3 class="text-lg font-bold text-gray-800 mb-2 dark:text-white">Secure</h3>
+                <p class="text-gray-600 dark:text-gray-300">Your code is processed securely and never stored .</p>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-12 flex items-center justify-center">
+        <div class="container mx-auto px-4 text-center">
+            <h3 class="text-lg font-bold mb-4">ROSETTACODE</h3>
+            <p class="text-gray-400">Bridging The Gap Between Programming Languages.</p>
+        </div>
+    </footer>
+
+    <script src="js/converter.js"></script>
+    <script>
+        console.log("Dark mode enabled:", document.documentElement.classList.contains("dark"));
+    </script>
+</body>
+</html>

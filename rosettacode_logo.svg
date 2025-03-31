@@ -1,0 +1,15 @@
+<svg width="200" height="200" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background Circle -->
+  <circle cx="100" cy="100" r="90" fill="#1E1E1E"/>
+  
+  <!-- Stylized 'R' -->
+  <text x="50" y="120" font-family="Arial, sans-serif" font-size="80" fill="#00A6FF" font-weight="bold">R</text>
+
+  <!-- Code Brackets -->
+  <text x="20" y="110" font-family="Courier New, monospace" font-size="50" fill="#F7DF1E">{</text>
+  <text x="140" y="110" font-family="Courier New, monospace" font-size="50" fill="#F7DF1E">}</text>
+
+  <!-- Small Python & Java Icons (Mock Representation) -->
+  <circle cx="70" cy="150" r="10" fill="#FFD43B"/> <!-- Python -->
+  <circle cx="130" cy="150" r="10" fill="#5382A1"/> <!-- Java -->
+</svg>

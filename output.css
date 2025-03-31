@@ -1,0 +1,52 @@
+/* Temporary basic styles until build process is fixed */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+    background-color: #f9fafb; /* bg-gray-50 */
+    color: #111827; /* text-gray-900 */
+}
+
+body.dark {
+    background-color: #111827; /* bg-gray-900 */
+    color: #f3f4f6; /* text-gray-100 */
+}
+
+main {
+    max-width: 1280px; /* container */
+    margin: 0 auto;
+    padding: 32px; /* px-4 py-8 */
+}
+
+div {
+    background-color: #ffffff; /* bg-white */
+    border-radius: 0.5rem; /* rounded-lg */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* shadow-md */
+    padding: 24px; /* p-6 */
+    margin-bottom: 32px; /* mb-8 */
+}
+
+div.dark {
+    background-color: #1f2937; /* bg-gray-800 */
+    color: #f3f4f6; /* text-gray-100 */
+}
+
+h2 {
+    font-size: 1.5rem; /* text-2xl */
+    font-weight: 700; /* font-bold */
+    color: #1f2937; /* text-gray-800 */
+    margin-bottom: 24px; /* mb-6 */
+}
+
+h2.dark {
+    color: #ffffff; /* text-white */
+}
+
+p {
+    color: #6b7280; /* text-gray-600 */
+}
+
+p.dark {
+    color: #d1d5db; /* text-gray-300 */
+}
