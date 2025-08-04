@@ -11,5 +11,5 @@ This repository contains solutions to various programming tasks from the [Rosett
 ## Getting Started
 1. Clone the repository:
    ```bash
-   git clone https://github.com/your-username/ROSETTACODE-main.git
-Replace placeholders like `your-username` with actual details specific to your project. Let me know if you need further customization!
+   git clone https://github.com/aswinrp777/ROSETTACODE-main.git
+
